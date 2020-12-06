@@ -21,12 +21,12 @@ def open_browser(adresa, user, password):
     # Also I've added logging with -log switch...Same folder...
     browser = webdriver.Chrome(executable_path=path, options=options, service_args=["--verbose", "--log-path=chromedirver.log"])
     browser.get('https://'+adresa+':8443/?referrer=https%3A%2F%2F'+adresa+'%3A8443%2Fapp%2Fcom.tngtech.sastiot.feedback%2F')
-    loginElement = browser.find_element_by_id("Login_username")
-    loginElement.send_keys(user)
-    passwordElement = browser.find_element_by_id("Login_password")
-    passwordElement.send_keys(password)
-    loginButton = browser.find_element_by_id("Login_loginButton")
-    loginButton.click()
+    login_element = browser.find_element_by_id("Login_username")
+    login_element.send_keys(user)
+    password_element = browser.find_element_by_id("Login_password")
+    password_element.send_keys(password)
+    login_button = browser.find_element_by_id("Login_loginButton")
+    login_button.click()
     time.sleep(60)
     browser.quit()
 
