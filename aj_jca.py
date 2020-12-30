@@ -4,7 +4,7 @@ import time
 
 
 def open_browser(adresa, user, password):
-    path = os.getcwd()+'\chromedriver.exe'
+    path = os.getcwd()+'/chromedriver'
     options = webdriver.ChromeOptions()
     # ignores S&ST no-valid-cert on the camera
     options.add_argument('ignore-certificate-errors')
@@ -34,7 +34,7 @@ def open_browser(adresa, user, password):
 # The main executable
 if __name__ == '__main__':
     while True:
-        kamera_adresa = ''
-        kamera_username = ''
-        kamera_password = ''
+        kamera_adresa = '<ip>'
+        kamera_username = '<user>>'
+        kamera_password = '<pass>'
         open_browser(kamera_adresa, kamera_username, kamera_password)
